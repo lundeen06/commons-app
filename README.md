@@ -6,3 +6,5 @@ Given the large affected population and few known ways to prevent food allergies
 [move to the obligations and subsequent dilemma dining halls face]
 [introduce soln–help students find the food that's best for them on a given day w/ the app]
 [put photos of app's usage, like a guide]
+
+[sources/bib]
