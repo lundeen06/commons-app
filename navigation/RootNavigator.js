@@ -34,6 +34,7 @@ export const RootNavigator = () => {
     <NavigationContainer>
       {/* {user ? <AppStack /> : <AuthStack />} */}
       <AppStack /> 
+      {/* ^ test the app w/o auth homepage */}
     </NavigationContainer>
   );
 };
