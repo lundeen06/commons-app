@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, StyleSheet, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Images, Colors, auth } from "../config";
 
@@ -24,20 +24,20 @@ export const Footer = () => {
   return (
     <View style={styles.footer}>
       <TouchableOpacity onPress={() => console.log('Home pressed')}>
-        <Icon name="home" size={30} style={styles.icon} />
+        <View> <Icon name="home" size={30} style={styles.icon} /> </View>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => console.log('Map pressed')}>
-        <Icon name="map" size={30} style={styles.icon} />
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => console.log('Book/Menu pressed')}>
-        <Icon name="book" size={30} style={styles.icon} />
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => console.log('Teams pressed')}>
-        <Icon name="people" size={30} style={styles.icon} /> {/* Adjusted to 'people' for teams */}
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => console.log('Profile pressed')}>
-        <Icon name="person" size={30} style={styles.icon} />
-      </TouchableOpacity>
+      {/* <TouchableOpacity onPress={() => console.log('Map pressed')}> */}
+        {/* <Icon name="map" size={30} style={styles.icon} /> */}
+      {/* </TouchableOpacity> */}
+      {/* <TouchableOpacity onPress={() => console.log('Book/Menu pressed')}> */}
+        {/* <Icon name="book" size={30} style={styles.icon} /> */}
+      {/* </TouchableOpacity> */}
+      {/* <TouchableOpacity onPress={() => console.log('Teams pressed')}> */}
+        {/* <Icon name="people" size={30} style={styles.icon} /> Adjusted to 'people' for teams */}
+      {/* </TouchableOpacity> */}
+      {/* <TouchableOpacity onPress={() => console.log('Profile pressed')}> */}
+        {/* <Icon name="person" size={30} style={styles.icon} /> */}
+      {/* </TouchableOpacity> */}
     </View>
   );
 };
