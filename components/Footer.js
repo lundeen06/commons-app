@@ -1,31 +1,26 @@
 import React from 'react';
 import { View, TouchableOpacity, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-
-// Define your custom Colors object here if you haven't already
-const Colors = {
-  red: '#ff0000',
-  // Add other colors as needed
-};
+import { Images, Colors, auth } from "../config";
 
 const styles = StyleSheet.create({
   footer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    backgroundColor: Colors.red, // Use your custom color
+    backgroundColor: Colors.red, // Ensure this color is defined in your Colors object
     padding: 10,
   },
   icon: {
-    marginLeft: 15,
-    color: Colors.red, // Use your custom color
-    fontSize: 30,
-    marginVertical: 8,
+    marginLeft: 20, // Increased margin for better spacing
+    color: Colors.white,
+    fontSize: 35, // Increased font size for better visibility
+    marginVertical: 10, // Adjusted vertical margin for better spacing
     fontWeight: '600',
   },
 });
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <View style={styles.footer}>
       <TouchableOpacity onPress={() => console.log('Home pressed')}>
@@ -46,5 +41,3 @@ const Footer = () => {
     </View>
   );
 };
-
-export default Footer;

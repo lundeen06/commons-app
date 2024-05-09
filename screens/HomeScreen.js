@@ -11,7 +11,7 @@ export const HomeScreen = () => {
   };
   return (
     <View style={styles.main}>
-      <Button title="Sign Out" onPress={handleLogout} />
+      {/* <Button title="Sign Out" onPress={handleLogout} /> */}
       <Footer />
     </View>
   );
