@@ -6,6 +6,7 @@ import { auth } from "../config";
 
 testUser = {
   firstName: "first name",
+  recommendedDiningHall: "recommended dining hall",
 }
 
 user = testUser
@@ -27,6 +28,10 @@ export const HomeScreen = () => {
       <TouchableOpacity onPress={() => navigation.navigate('Map')} style={styles.imageContainer}>
         <Image source={require('../assets/map.png')} style={styles.image} />
       </TouchableOpacity>
+      <View style={styles.info}>
+        <Text style={styles.h5}>Suggested: {user.recommendedDiningHall} </Text>
+        <View style={styles.infoContainer}></View>
+      </View>
       <Footer />
     </View>
   );
@@ -44,12 +49,20 @@ const styles = StyleSheet.create({
   },
   greeting: {
     width: '100%',
-    marginLeft: 100,
+    marginLeft: 50,
     marginTop: 20,
   },
   h1: {
     fontSize: 30,
     fontWeight: '600',
+  },
+  h5: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#555',
+  },
+  info: {
+    height: 250,
   },
   subtitle: {
     color: '#888',
@@ -61,6 +74,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 250,
     resizeMode: 'contain',
+    borderRadius: 20,
   },
   imageContainer: {
     width: '100%',
