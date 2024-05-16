@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Button, Text } from "react-native";
+import { View, StyleSheet, Button, Text, TouchableOpacity, Image } from "react-native";
 import { signOut } from "firebase/auth";
 import { Footer } from "../components/Footer";
 import { auth } from "../config";
@@ -24,6 +24,9 @@ export const HomeScreen = () => {
         <Text style={styles.h1}>Hello, {user.firstName}! </Text>
         <Text style={styles.subtitle}>See your dining options today!</Text>
       </View>
+      <TouchableOpacity onPress={() => navigation.navigate('Map')}>
+        <Image source={{uri: '../assets/icon.png'}} style={styles.image} />
+      </TouchableOpacity>
       <Footer />
     </View>
   );
@@ -32,12 +35,12 @@ export const HomeScreen = () => {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    flexDirection: 'column', // Ensure children are laid out vertically
-    justifyContent: 'space-between', // Pushes footer to the bottom
-    alignItems: 'center', // Centers content horizontally if needed
-    width: '100%', // Ensures the view takes full width
-    height: '100%', // Ensures the view takes full height
-    backgroundColor: '#fff', 
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#fff',
   },
   greeting: {
     width: '100%',
@@ -52,5 +55,10 @@ const styles = StyleSheet.create({
     color: '#888',
     fontSize: 12,
     fontWeight: '600',
+  },
+  image: {
+    width: 200,
+    height: 200,
+    resizeMode: 'contain',
   }
 });
