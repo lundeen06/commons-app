@@ -8,7 +8,7 @@ const Stack = createStackNavigator();
 export const AppStack = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="[TITLE]" component={HomeScreen} />
+      <Stack.Screen name="dev-home" component={HomeScreen} />
     </Stack.Navigator>
   );
 };
