@@ -10,13 +10,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: Colors.red, // Ensure this color is defined in your Colors object
     padding: 10,
+    paddingBottom: 20,
+    width: '100%',
+    height: 100,
   },
   icon: {
     marginLeft: 20, // Increased margin for better spacing
     color: Colors.white,
-    fontSize: 20, // Increased font size for better visibility
+    fontSize: 25, // Increased font size for better visibility
     marginVertical: 10, // Adjusted vertical margin for better spacing
     fontWeight: '600',
+    paddingBottom: 30,
   },
 });
 
@@ -24,19 +28,19 @@ export const Footer = () => {
   return (
     <View style={styles.footer}>
       <TouchableOpacity onPress={() => console.log('Home pressed')}>
-        <Text> <Icon name="home" size={20} style={styles.icon} /> </Text>
+        <Text> <Icon name="home" style={styles.icon} /> </Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => console.log('Map pressed')}>
-        <Text> <Icon name="map" size={20} style={styles.icon} /> </Text>
+        <Text> <Icon name="map" style={styles.icon} /> </Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => console.log('Book/Menu pressed')}>
-        <Text> <Icon name="book" size={20} style={styles.icon} /> </Text>
+        <Text> <Icon name="book" style={styles.icon} /> </Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => console.log('Teams pressed')}>
-        <Text> <Icon name="people" size={20} style={styles.icon} /> </Text>
+        <Text> <Icon name="people" style={styles.icon} /> </Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => console.log('Profile pressed')}>
-        <Text> <Icon name="person" size={20} style={styles.icon} /> </Text>
+        <Text> <Icon name="person" style={styles.icon} /> </Text>
       </TouchableOpacity>
     </View>
   );
