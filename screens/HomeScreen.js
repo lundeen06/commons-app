@@ -63,6 +63,8 @@ const styles = StyleSheet.create({
   },
   info: {
     height: 250,
+    width: '100%',
+    marginLeft: 50,
   },
   subtitle: {
     color: '#888',
