@@ -24,8 +24,8 @@ export const HomeScreen = () => {
         <Text style={styles.h1}>Hello, {user.firstName}! </Text>
         <Text style={styles.subtitle}>See your dining options today!</Text>
       </View>
-      <TouchableOpacity onPress={() => navigation.navigate('Map')}>
-        <Image source={{uri: '../assets/icon.png'}} style={styles.image} />
+      <TouchableOpacity onPress={() => navigation.navigate('Map')} style={styles.imageContainer}>
+        <Image source={require('../assets/map.png')} style={styles.image} />
       </TouchableOpacity>
       <Footer />
     </View>
@@ -57,8 +57,14 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   image: {
-    width: 200,
-    height: 200,
+    paddingLeft: 10,
+    width: '100%',
+    height: 250,
     resizeMode: 'contain',
+  },
+  imageContainer: {
+    width: '100%',
+    marginLeft: 20,
+    marginRight: 20,
   }
 });
