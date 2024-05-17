@@ -10,9 +10,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: Colors.lightGray, // Ensure this color is defined in your Colors object
-    width: 150,
+    width: 165,
     height: 150,
-    borderRadius: 20,
+    borderRadius: 30,
   },
 });
 
