@@ -9,9 +9,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Colors.red, // Ensure this color is defined in your Colors object
-    width: 200,
-    height: 200,
+    backgroundColor: Colors.lightGray, // Ensure this color is defined in your Colors object
+    width: 150,
+    height: 150,
     borderRadius: 20,
   },
 });
