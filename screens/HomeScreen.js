@@ -2,6 +2,7 @@ import React from "react";
 import { View, StyleSheet, Button, Text, TouchableOpacity, Image } from "react-native";
 import { signOut } from "firebase/auth";
 import { Footer } from "../components/Footer";
+import { CapacityInfo } from "../components/CapacityInfo";
 import { auth } from "../config";
 
 testUser = {
@@ -30,7 +31,9 @@ export const HomeScreen = () => {
       </TouchableOpacity>
       <View style={styles.info}>
         <Text style={styles.h5}>Suggested: {user.recommendedDiningHall} </Text>
-        <View style={styles.infoContainer}></View>
+        <View style={styles.infoContainer}>
+          <CapacityInfo />
+        </View>
       </View>
       <Footer />
     </View>
