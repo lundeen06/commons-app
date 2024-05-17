@@ -4,6 +4,7 @@ import { signOut } from "firebase/auth";
 import { Footer } from "../components/Footer";
 import { DiningCapacity } from "../components/DiningCapacity";
 import { MenuPreview } from "../components/MenuPreview";
+import { WalkingDistance } from "../components/WalkingDistance";
 import { auth } from "../config";
 
 testUser = {
@@ -35,6 +36,8 @@ export const HomeScreen = () => {
         <View style={styles.infoContainer}>
           <DiningCapacity />
           <MenuPreview />
+          <WalkingDistance />
+          <WalkingDistance />
         </View>
       </View>
       <Footer />
@@ -68,16 +71,18 @@ const styles = StyleSheet.create({
   },
   info: {
     height: 250,
-    width: '100%',
-    marginLeft: 50,
-    marginRight: 50,
+    // height: '100%',
+    // width: '100%',
+    marginLeft: 25,
+    marginRight: 25,
   },
   infoContainer: {
     flex: 2, 
     flexDirection: 'row',
-    justifyContent: 'flex-end',
-    // alignItems: 'space-around',
-    height: 250,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    marginTop: 20,
   },
   subtitle: {
     color: '#888',
