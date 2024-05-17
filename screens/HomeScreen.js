@@ -2,7 +2,8 @@ import React from "react";
 import { View, StyleSheet, Button, Text, TouchableOpacity, Image } from "react-native";
 import { signOut } from "firebase/auth";
 import { Footer } from "../components/Footer";
-import { CapacityInfo } from "../components/CapacityInfo";
+import { DiningCapacity } from "../components/DiningCapacity";
+import { MenuPreview } from "../components/MenuPreview";
 import { auth } from "../config";
 
 testUser = {
@@ -32,7 +33,8 @@ export const HomeScreen = () => {
       <View style={styles.info}>
         <Text style={styles.h5}>Suggested: {user.recommendedDiningHall} </Text>
         <View style={styles.infoContainer}>
-          <CapacityInfo />
+          <DiningCapacity />
+          <MenuPreview />
         </View>
       </View>
       <Footer />
@@ -68,6 +70,14 @@ const styles = StyleSheet.create({
     height: 250,
     width: '100%',
     marginLeft: 50,
+    marginRight: 50,
+  },
+  infoContainer: {
+    flex: 2, 
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    // alignItems: 'space-around',
+    height: 250,
   },
   subtitle: {
     color: '#888',
