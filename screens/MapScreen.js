@@ -16,10 +16,11 @@ export const MapScreen = () => {
   );
 };
 
-styles = StyleSheet.create({
+// Define styles inside the component
+const styles = StyleSheet.create({
   main: {
-    backgroundColor: '#450',
-    width: '100%',
-    height: '100%',
+    backgroundColor: '#450', // Assuming you meant #FF4500 for a bright orange color
+    width: '100%', // Use flex: 1 for full screen
+    height: '100%', // Use flex: 1 for full screen
   }
 });
