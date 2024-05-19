@@ -5,20 +5,22 @@ import { HomeScreen } from "../screens/HomeScreen";
 import { MapScreen } from "../screens/MapScreen";
 import { MenuScreen } from "../screens/MenuScreen";
 import { CommunityScreen } from "../screens/CommunityScreen";
-import { Footer } from '../components/Footer'; // Adjust the import path as necessary
 
 const Stack = createStackNavigator();
 
 export const AppStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        animationEnabled: false, // Disable animation for all screens
+      }}
+    >
       <Stack.Screen 
         name="Home" 
         component={HomeScreen} 
         options={{
           headerLeft: () => null, // Remove the back button
         }}
-        screenOptions={{ animation: 'none' }}
       />
       <Stack.Screen 
         name="Map" 
@@ -26,7 +28,6 @@ export const AppStack = () => {
         options={{
           headerLeft: () => null, // Remove the back button
         }}
-        screenOptions={{ animation: 'none' }}
       />
       <Stack.Screen 
         name="Menu" 
@@ -34,7 +35,6 @@ export const AppStack = () => {
         options={{
           headerLeft: () => null, // Remove the back button
         }}
-        screenOptions={{ animation: 'none' }}
       />
       <Stack.Screen 
         name="Community" 
@@ -42,7 +42,6 @@ export const AppStack = () => {
         options={{
           headerLeft: () => null, // Remove the back button
         }}
-        screenOptions={{ animation: 'none' }}
       />
     </Stack.Navigator>
   );
