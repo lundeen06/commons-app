@@ -3,7 +3,7 @@ import { Text, View, TouchableOpacity, StyleSheet, Dimensions } from 'react-nati
 import { Images, Colors, auth } from "../config";
 import CircularProgressBar from "../components/CircularProgressBar";
 
-const capacity = 19;
+const capacity = 9;
 
 const styles = StyleSheet.create({
   container: {
