@@ -1,16 +1,13 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity, Image, Text } from "react-native"; // Make sure to import Text
+import { View, StyleSheet, Button, Text, TouchableOpacity, Image } from "react-native";
 import { signOut } from "firebase/auth";
 import { Footer } from "../components/Footer";
-import { auth } from "../config";
-import { useNavigation } from '@react-navigation/native';
+import { Images, Colors, auth } from "../config";
 
 export const MapScreen = () => {
   const handleLogout = () => {
     signOut(auth).catch((error) => console.log("Error logging out: ", error));
   };
-
-  const navigation = useNavigation();
 
   return (
     <View style={styles.main}>
@@ -21,7 +18,7 @@ export const MapScreen = () => {
 
 styles = StyleSheet.create({
   main: {
-    backgroundColor: 'blue',
+    backgroundColor: '#450',
     width: '100%',
     height: '100%',
   }
