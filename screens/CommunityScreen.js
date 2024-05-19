@@ -11,7 +11,10 @@ export const CommunityScreen = ({ navigation }) => {
 
   return (
     <View style={styles.main}>
-      <Text style={styles.h1}> Community </Text>
+      <View style={styles.hero}> 
+        <Text style={styles.h1}>Community</Text>
+      </View>
+      
       
       <Footer navigation={navigation} />
     </View>
@@ -31,6 +34,11 @@ const styles = StyleSheet.create({
   },
   footer: {
     justifySelf: 'flex-start',
+  },
+  hero: {
+    width: '100%',
+    marginLeft: 50,
+    // marginTop: 20,
   },
   h1: {
     fontSize: 32,

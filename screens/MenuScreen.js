@@ -11,7 +11,10 @@ export const MenuScreen = ({ navigation }) => {
 
   return (
     <View style={styles.main}>
-      <Text style={styles.h1}> Menus and Hours </Text>
+      <View style={styles.hero}> 
+      <Text style={styles.h1}>Menus and Hours</Text>
+      </View>
+      
       
       <Footer navigation={navigation} />
     </View>
@@ -32,10 +35,10 @@ const styles = StyleSheet.create({
   footer: {
     justifySelf: 'flex-start',
   },
-  greeting: {
+  hero: {
     width: '100%',
     marginLeft: 50,
-    marginTop: 20,
+    // marginTop: 20,
   },
   h1: {
     fontSize: 32,
