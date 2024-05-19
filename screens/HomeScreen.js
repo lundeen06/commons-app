@@ -5,7 +5,8 @@ import { Footer } from "../components/Footer";
 import { DiningCapacity } from "../components/DiningCapacity";
 import { MenuPreview } from "../components/MenuPreview";
 import { WalkingDistance } from "../components/WalkingDistance";
-import { auth } from "../config";
+import { Images, Colors, auth } from "../config";
+
 
 testUser = {
   firstName: "first name",
@@ -37,7 +38,7 @@ export const HomeScreen = () => {
           <MenuPreview />
           <DiningCapacity />
           <WalkingDistance />
-          <WalkingDistance />
+          {/* <WalkingDistance /> */}
         </View>
       </View>
       <Footer style={styles.footer}/>
@@ -64,13 +65,14 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   h1: {
-    fontSize: 30,
+    fontSize: 32,
     fontWeight: '600',
+    color: Colors.font,
   },
   h5: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#555',
+    color: Colors.subtitle,
   },
   info: {
     height: 300,

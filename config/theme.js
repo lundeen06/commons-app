@@ -8,4 +8,5 @@ export const Colors = {
   darkGreen: '#324038',
   red: "#fc5c65",
   font: '#324038', 
+  subtitle: '#555',
 };

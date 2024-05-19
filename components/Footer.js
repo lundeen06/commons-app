@@ -35,12 +35,12 @@ export const Footer = () => {
       <TouchableOpacity onPress={() => console.log('Map pressed')}>
         <Text> <Icon name="map-outline" style={styles.icon} /> </Text>
       </TouchableOpacity>
-      {/* <TouchableOpacity onPress={() => console.log('Book/Menu pressed')}>
-        <Text> <Icon name="fast-food-outline" style={styles.icon} /> </Text>
-      </TouchableOpacity> */}
       <TouchableOpacity onPress={() => console.log('Book/Menu pressed')}>
-        <Text> <Icon name="pizza-outline" style={styles.icon} /> </Text>
+        <Text> <Icon name="fast-food-outline" style={styles.icon} /> </Text>
       </TouchableOpacity>
+      {/* <TouchableOpacity onPress={() => console.log('Book/Menu pressed')}>
+        <Text> <Icon name="pizza-outline" style={styles.icon} /> </Text>
+      </TouchableOpacity> */}
       {/* <TouchableOpacity onPress={() => console.log('Teams pressed')}>
         <Text> <Icon name="people-outline" style={styles.icon} /> </Text>
       </TouchableOpacity> */}
