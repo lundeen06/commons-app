@@ -33,6 +33,21 @@ import { CommunityScreen } from "../screens/CommunityScreen";
 // jar jar banks
 // culinaryizer
 // the dish 
+// plate bull
+// plurpl
+// merkel
+// smirkl
+// murpl
+// hurpl
+// knifr
+// loonr
+// new forker
+// containr
+// complainer
+// gummer
+// phood
+// it all goes to sh*t anyway
+
 
 const Stack = createStackNavigator();
 
