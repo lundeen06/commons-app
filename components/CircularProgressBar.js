@@ -27,9 +27,11 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: '50%',
     left: '50%',
-    transform: [{ translateX: -15 }, { translateY: -5 }],
+    transform: [{ translateX: -28 }, { translateY: -5 }],
     fontSize: 14,
     lineHeight: 14,
+    width: '100%',
+    textAlign: 'center',
     color: Colors.white,
     fontWeight: '800'
   },
@@ -45,7 +47,7 @@ const CircularProgressBar = ({ percent }) => {
       <View style={styles.baseCircle}></View>
 
       {/* Progress Circle */}
-      <View style={[styles.progressCircle, { transform: [{ rotate: `${rotationAngle}deg` }] }]}></View>
+      <View style={[styles.progressCircle, { transform: [{ rotate: `${rotationAngle}deg` }] }]} />
 
       {/* Percentage Text */}
       <Text style={styles.percentText}>{percent}%</Text>
