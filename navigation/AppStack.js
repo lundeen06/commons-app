@@ -6,6 +6,27 @@ import { MapScreen } from "../screens/MapScreen";
 import { MenuScreen } from "../screens/MenuScreen";
 import { CommunityScreen } from "../screens/CommunityScreen";
 
+// oh you get the name? explain it. fyph. (for your pie hole)
+// foodbook. we out here getting sued with this one!!! 
+// menuer
+// bld (breakfast, lunch, dinner)
+// tree-eats --> tr eats
+// mc'evs --> mc evil?
+// hungr
+// food nav
+// navr say avar
+// maccr
+// flaccr
+// slaccr
+// paccr
+// yakr
+// dakr
+// tackr
+// phlackr
+// happr
+// yappr
+// wafflr
+
 const Stack = createStackNavigator();
 
 export const AppStack = () => {
