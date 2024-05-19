@@ -5,7 +5,7 @@ import { Images, Colors } from "../config";
 
 const CircularChart = ({ percent }) => {
   return (
-    <Svg width="50" height="50" viewBox="0 0 36 36">
+    <Svg width="55" height="55" viewBox="0 0 36 36">
       {/* Background Circle */}
       <Path
         className="circle-bg"
