@@ -18,10 +18,11 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
   description: {
-    color: Colors.white,
+    color: '#b1bcb5',
     fontSize: 12,
     alignSelf: 'flex-end',
-    marginBottom: 10
+    marginBottom: 10,
+    fontWeight: '600'
   }
 });
 
