@@ -9,10 +9,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Colors.lightGray, // Ensure this color is defined in your Colors object
+    backgroundColor: Colors.darkGreen, // Ensure this color is defined in your Colors object
     width: 165,
-    height: 150,
-    borderRadius: 30,
+    height: 165,
+    borderRadius: 25,
   },
 });
 

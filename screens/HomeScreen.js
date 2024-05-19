@@ -34,8 +34,8 @@ export const HomeScreen = () => {
       <View style={styles.info}>
         <Text style={styles.h5}>Suggested: {user.recommendedDiningHall} </Text>
         <View style={styles.infoContainer}>
-          <DiningCapacity />
           <MenuPreview />
+          <DiningCapacity />
           <WalkingDistance />
           <WalkingDistance />
         </View>
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     color: '#555',
   },
   info: {
-    height: 250,
+    height: 300,
     // height: '100%',
     // width: '100%',
     marginLeft: 25,
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexWrap: 'wrap',
-    rowGap: 10,
+    rowGap: 20,
     marginTop: 10,
   },
   subtitle: {
