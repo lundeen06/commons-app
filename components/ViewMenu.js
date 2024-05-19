@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     justifyContent: 'center',
     padding: 25,
-    backgroundColor: '#fff', // Ensure this color is defined in your Colors object
+    backgroundColor: Colors.white, // Ensure this color is defined in your Colors object
     width: 165,
     height: 75,
     borderRadius: 30,
