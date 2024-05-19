@@ -31,6 +31,8 @@ import { CommunityScreen } from "../screens/CommunityScreen";
 // bitemarks --> bitemarx
 // feastr
 // jar jar banks
+// culinaryizer
+// the dish 
 
 const Stack = createStackNavigator();
 
