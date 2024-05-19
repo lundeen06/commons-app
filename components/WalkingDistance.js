@@ -35,12 +35,9 @@ const styles = StyleSheet.create({
 
 export const WalkingDistance = () => {
   return (
-    <TouchableOpacity onPress={() => console.log('capacity info pressed')}>
-        <View style={styles.container}>
-            <Text style={styles.distance}>{diningHall.distance} mi</Text>
-            <Text style={styles.description}>walking distance</Text>
-        </View>
-    </TouchableOpacity>
-   
+      <View style={styles.container}>
+          <Text style={styles.distance}>{diningHall.distance} mi</Text>
+          <Text style={styles.description}>walking distance</Text>
+      </View>
   );
 };
