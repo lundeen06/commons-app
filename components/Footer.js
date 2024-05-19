@@ -18,10 +18,8 @@ const styles = StyleSheet.create({
     height: 100,
   },
   icon: {
-    marginLeft: 20, // Increased margin for better spacing
     color: Colors.darkGreen,
     fontSize: 25, // Increased font size for better visibility
-    marginVertical: 10, // Adjusted vertical margin for better spacing
     fontWeight: '600',
     paddingBottom: 30,
   },
@@ -36,12 +34,15 @@ export const Footer = () => {
       <TouchableOpacity onPress={() => console.log('Map pressed')}>
         <Text> <Icon name="map-outline" style={styles.icon} /> </Text>
       </TouchableOpacity>
+      {/* <TouchableOpacity onPress={() => console.log('Book/Menu pressed')}>
+        <Text> <Icon name="fast-food-outline" style={styles.icon} /> </Text>
+      </TouchableOpacity> */}
       <TouchableOpacity onPress={() => console.log('Book/Menu pressed')}>
-        <Text> <Icon name="book-outline" style={styles.icon} /> </Text>
+        <Text> <Icon name="pizza-outline" style={styles.icon} /> </Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => console.log('Teams pressed')}>
+      {/* <TouchableOpacity onPress={() => console.log('Teams pressed')}>
         <Text> <Icon name="people-outline" style={styles.icon} /> </Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
       <TouchableOpacity onPress={() => console.log('Profile pressed')}>
         <Text> <Icon name="person-outline" style={styles.icon} /> </Text>
       </TouchableOpacity>
