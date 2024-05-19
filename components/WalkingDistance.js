@@ -14,7 +14,6 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     justifyContent: 'center',
     padding: 25,
-
     backgroundColor: '#fff', // Ensure this color is defined in your Colors object
     width: 165,
     height: 75,
@@ -25,15 +24,21 @@ const styles = StyleSheet.create({
   },
   distance: {
     color: Colors.darkGray,
-    
+    fontSize: 20,
+    fontWeight: '600',
   }, 
+  description: {
+    color: Colors.gray,
+    fontSize: 12,
+  }
 });
 
 export const WalkingDistance = () => {
   return (
     <TouchableOpacity onPress={() => console.log('capacity info pressed')}>
         <View style={styles.container}>
-            <Text style={styles.distance}>{diningHall.distance}mi</Text>
+            <Text style={styles.distance}>{diningHall.distance} mi</Text>
+            <Text style={styles.description}>walking distance</Text>
         </View>
     </TouchableOpacity>
    
