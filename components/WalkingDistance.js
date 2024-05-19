@@ -9,10 +9,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Colors.lightGray, // Ensure this color is defined in your Colors object
+    backgroundColor: '#fff', // Ensure this color is defined in your Colors object
     width: 165,
     height: 75,
     borderRadius: 30,
+    borderColor: Colors.lightGray,
+    borderStyle: 'solid',
+    borderWidth: 1,
   },
 });
 
