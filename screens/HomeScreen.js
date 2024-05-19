@@ -5,6 +5,7 @@ import { Footer } from "../components/Footer";
 import { DiningCapacity } from "../components/DiningCapacity";
 import { MenuPreview } from "../components/MenuPreview";
 import { WalkingDistance } from "../components/WalkingDistance";
+import { ViewMenu } from "../components/ViewMenu";
 import { Images, Colors, auth } from "../config";
 
 
@@ -38,7 +39,7 @@ export const HomeScreen = () => {
           <MenuPreview />
           <DiningCapacity />
           <WalkingDistance />
-          {/* <WalkingDistance /> */}
+          <ViewMenu />
         </View>
       </View>
       <Footer style={styles.footer}/>
