@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, TouchableOpacity, StyleSheet, Text } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
 import { Images, Colors, auth } from "../config";
 
 const styles = StyleSheet.create({
@@ -34,9 +33,9 @@ const styles = StyleSheet.create({
   },
 });
 
-export const ViewMenu = () => {
+export const ViewMenu = ({ navigation }) => {
   return (
-    <TouchableOpacity onPress={() => console.log('view menu pressed')}>
+    <TouchableOpacity onPress={() => navigation.navigate('Menu')}>
         <View style={styles.container}>
             <Text style={styles.mainText}>View Menu{' '}
               {/* <Icon name="chevron-forward-outline" style={styles.icon} /> */}
