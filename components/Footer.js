@@ -7,18 +7,19 @@ const styles = StyleSheet.create({
   footer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     backgroundColor: Colors.white, // Ensure this color is defined in your Colors object
     padding: 10,
     borderTopColor: Colors.lightGray, 
     borderTopWidth: 1,
     borderTopStyle: 'solid',
     paddingBottom: 20,
+    paddingTop: 20,
     width: '100%',
-    height: 100,
+    height: 90,
   },
   icon: {
-    color: Colors.darkGreen,
+    color: Colors.font,
     fontSize: 25, // Increased font size for better visibility
     fontWeight: '600',
     paddingBottom: 30,
