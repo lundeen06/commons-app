@@ -2,8 +2,10 @@ import React from 'react';
 import Svg, { Path, Text } from 'react-native-svg';
 import { Images, Colors } from "../config";
 
-
 const CircularChart = ({ percent }) => {
+  // Check if percent is less than 10 and prepend a space if true
+  const formattedPercent = percent < 10? " " + percent : percent;
+
   return (
     <Svg width="60" height="60" viewBox="0 0 36 36">
       {/* Background Circle */}
@@ -35,7 +37,7 @@ const CircularChart = ({ percent }) => {
         fill={Colors.white}
         textAlign="center"
       >
-        {percent}%
+        {formattedPercent}%
       </Text>
     </Svg>
   );
