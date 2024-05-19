@@ -44,7 +44,7 @@ const CircularProgressBar = ({ percent }) => {
   return (
     <View style={styles.container}>
       {/* Base Circle */}
-      <View style={styles.baseCircle}></View>
+      {/* <View style={styles.baseCircle}></View> */}
 
       {/* Progress Circle */}
       <View style={[styles.progressCircle, { transform: [{ rotate: `${rotationAngle}deg` }] }]} />
