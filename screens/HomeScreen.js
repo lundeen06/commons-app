@@ -37,7 +37,7 @@ export const HomeScreen = ({ navigation }) => { // Destructure navigation from p
           <MenuPreview />
           <DiningCapacity />
           <WalkingDistance />
-          <ViewMenu />
+          <ViewMenu navigation={navigation} />
         </View>
       </View>
       <Footer navigation={navigation} style={styles.footer}/>
