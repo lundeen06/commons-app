@@ -1,8 +1,8 @@
 import * as React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
-import { MapScreen } from "../screens/MapScreen";
 import { HomeScreen } from "../screens/HomeScreen";
+import { MapScreen } from "../screens/MapScreen";
 import { MenuScreen } from "../screens/MenuScreen";
 import { CommunityScreen } from "../screens/CommunityScreen";
 import { Footer } from '../components/Footer'; // Adjust the import path as necessary
@@ -18,6 +18,7 @@ export const AppStack = () => {
         options={{
           headerLeft: () => null, // Remove the back button
         }}
+        screenOptions={{ animation: 'none' }}
       />
       <Stack.Screen 
         name="Map" 
@@ -25,6 +26,7 @@ export const AppStack = () => {
         options={{
           headerLeft: () => null, // Remove the back button
         }}
+        screenOptions={{ animation: 'none' }}
       />
       <Stack.Screen 
         name="Menu" 
@@ -32,6 +34,7 @@ export const AppStack = () => {
         options={{
           headerLeft: () => null, // Remove the back button
         }}
+        screenOptions={{ animation: 'none' }}
       />
       <Stack.Screen 
         name="Community" 
@@ -39,6 +42,7 @@ export const AppStack = () => {
         options={{
           headerLeft: () => null, // Remove the back button
         }}
+        screenOptions={{ animation: 'none' }}
       />
     </Stack.Navigator>
   );
