@@ -26,6 +26,8 @@ import { CommunityScreen } from "../screens/CommunityScreen";
 // happr
 // yappr
 // wafflr
+// trufflr
+// triflr
 
 const Stack = createStackNavigator();
 
