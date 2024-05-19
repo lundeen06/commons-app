@@ -28,6 +28,8 @@ import { CommunityScreen } from "../screens/CommunityScreen";
 // wafflr
 // trufflr
 // triflr
+// bitemarks --> bitemarx
+// 
 
 const Stack = createStackNavigator();
 
