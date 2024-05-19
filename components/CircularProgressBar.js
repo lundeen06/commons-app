@@ -5,21 +5,21 @@ import { Images, Colors } from "../config";
 const styles = StyleSheet.create({
   container: {
     position: 'relative',
-    width: 50,
-    height: 50,
+    width: 60,
+    height: 60,
   },
   baseCircle: {
     width: '100%',
     height: '100%',
     borderRadius: 50,
-    borderWidth: 3,
+    borderWidth: 5,
     borderColor: '#ccc',
   },
   progressCircle: {
     width: '100%',
     height: '100%',
     borderRadius: 50,
-    borderWidth: 3,
+    borderWidth: 5,
     borderColor: '#007AFF',
     position: 'absolute',
   },
@@ -27,9 +27,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: '50%',
     left: '50%',
-    transform: [{ translateX: -13 }, { translateY: -5 }],
-    fontSize: 12,
-    lineHeight: 12,
+    transform: [{ translateX: -15 }, { translateY: -5 }],
+    fontSize: 14,
+    lineHeight: 14,
     color: Colors.white,
     fontWeight: '800'
   },
@@ -37,12 +37,7 @@ const styles = StyleSheet.create({
 
 const CircularProgressBar = ({ percent }) => {
   // Calculate the rotation angle based on the percentage
-  let rotationAngle = 0;
-  if (percent <= 50) {
-    rotationAngle = 180; // Fill half the circle
-  } else {
-    rotationAngle = 360 * (percent / 100); // Calculate the exact angle for percentages over 50%
-  }
+  rotationAngle = 360 * (percent / 100); // Calculate the exact angle for percentages over 50%
 
   return (
     <View style={styles.container}>
