@@ -28,11 +28,11 @@ const styles = StyleSheet.create({
 
 export const DiningCapacity = () => {
   return (
-    <TouchableOpacity onPress={() => console.log('capacity info pressed')}>
-      <View style={styles.container}>
-        <CircularProgressBar percent={capacity} />
-        <Text style={styles.description}>{user.recommendedDiningHall} is currently at {capacity}% capacity.</Text>
-      </View>
-    </TouchableOpacity>
+    // <TouchableOpacity onPress={() => console.log('capacity info pressed')}>
+    <View style={styles.container}>
+      <CircularProgressBar percent={capacity} />
+      <Text style={styles.description}>{user.recommendedDiningHall} is currently at {capacity}% capacity.</Text>
+    </View>
+    // </TouchableOpacity>
   );
 };
