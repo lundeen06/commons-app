@@ -40,7 +40,7 @@ export const HomeScreen = () => {
           <WalkingDistance />
         </View>
       </View>
-      <Footer />
+      <Footer style={styles.footer}/>
     </View>
   );
 };
@@ -54,6 +54,9 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: '#fff',
+  },
+  footer: {
+    justifySelf: 'flex-start',
   },
   greeting: {
     width: '100%',
@@ -82,7 +85,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexWrap: 'wrap',
-    marginTop: 20,
+    rowGap: 10,
+    marginTop: 10,
   },
   subtitle: {
     color: '#888',
