@@ -1,58 +1,44 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import Svg, { Path, Text } from 'react-native-svg';
 import { Images, Colors } from "../config";
 
-const styles = StyleSheet.create({
-  container: {
-    position: 'relative',
-    width: 60,
-    height: 60,
-  },
-  baseCircle: {
-    width: '100%',
-    height: '100%',
-    borderRadius: 50,
-    borderWidth: 5,
-    borderColor: '#ccc',
-  },
-  progressCircle: {
-    width: '100%',
-    height: '100%',
-    borderRadius: 50,
-    borderWidth: 5,
-    borderColor: '#007AFF',
-    position: 'absolute',
-  },
-  percentText: {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: [{ translateX: -28 }, { translateY: -5 }],
-    fontSize: 14,
-    lineHeight: 14,
-    width: '100%',
-    textAlign: 'center',
-    color: Colors.white,
-    fontWeight: '800'
-  },
-});
 
-const CircularProgressBar = ({ percent }) => {
-  // Calculate the rotation angle based on the percentage
-  rotationAngle = 360 * (percent / 100); // Calculate the exact angle for percentages over 50%
-
+const CircularChart = ({ percent }) => {
   return (
-    <View style={styles.container}>
-      {/* Base Circle */}
-      {/* <View style={styles.baseCircle}></View> */}
+    <Svg width="50" height="50" viewBox="0 0 36 36">
+      {/* Background Circle */}
+      <Path
+        className="circle-bg"
+        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+        fill="transparent"
+        stroke="#495950" // Assuming a light grey color for the background circle
+        strokeWidth="3"
+      />
 
-      {/* Progress Circle */}
-      <View style={[styles.progressCircle, { transform: [{ rotate: `${rotationAngle}deg` }] }]} />
+      {/* Foreground Circle */}
+      <Path
+        className="circle"
+        stroke="#bef957" // Green color for the foreground circle
+        strokeWidth="3"
+        fill="transparent"
+        strokeLinecap="round"
+        strokeDasharray={`${percent} 100`}
+        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
 
       {/* Percentage Text */}
-      <Text style={styles.percentText}>{percent}%</Text>
-    </View>
+      <Text
+        x="8"
+        y="21"
+        fontSize={9}
+        fontWeight="800"
+        fill={Colors.white}
+        textAlign="center"
+      >
+        {percent}%
+      </Text>
+    </Svg>
   );
 };
 
-export default CircularProgressBar;
+export default CircularChart;
