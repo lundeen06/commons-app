@@ -3,13 +3,15 @@ import { Text, View, TouchableOpacity, StyleSheet, Dimensions } from 'react-nati
 import { Images, Colors, auth } from "../config";
 import CircularProgressBar from "../components/CircularProgressBar";
 
-const capacity = 25;
+const capacity = 19;
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    padding: 15,
+    
     backgroundColor: Colors.darkGreen,
     width: 165,
     height: 165,
@@ -17,7 +19,9 @@ const styles = StyleSheet.create({
   },
   description: {
     color: Colors.white,
-    fontSize: 10,
+    fontSize: 12,
+    alignSelf: 'flex-end',
+    marginBottom: 10
   }
 });
 
@@ -26,7 +30,7 @@ export const DiningCapacity = () => {
     <TouchableOpacity onPress={() => console.log('capacity info pressed')}>
       <View style={styles.container}>
         <CircularProgressBar percent={capacity} />
-        <Text style={styles.description}>{user.recommendedDiningHall} is currently at {capacity}% capacity</Text>
+        <Text style={styles.description}>{user.recommendedDiningHall} is currently at {capacity}% capacity.</Text>
       </View>
     </TouchableOpacity>
   );
