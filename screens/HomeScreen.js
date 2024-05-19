@@ -8,16 +8,16 @@ import { WalkingDistance } from "../components/WalkingDistance";
 import { ViewMenu } from "../components/ViewMenu";
 import { Images, Colors, auth } from "../config";
 
-const testUser = {
-  firstName: "Max",
-  recommendedDiningHall: "Bartlett Dining Commons",
-};
 
-const user = testUser;
 
 export const HomeScreen = ({ navigation }) => { // Destructure navigation from props
   const handleLogout = () => {
     signOut(auth).catch((error) => console.log("Error logging out: ", error));
+  };
+
+  const user = {
+    firstName: "Max",
+    recommendedDiningHall: "Bartlett Dining Commons",
   };
 
   return (
@@ -35,7 +35,7 @@ export const HomeScreen = ({ navigation }) => { // Destructure navigation from p
         <Text style={styles.h5}>Suggested: {user.recommendedDiningHall} </Text>
         <View style={styles.infoContainer}>
           <MenuPreview />
-          <DiningCapacity />
+          <DiningCapacity user={user} />
           <WalkingDistance />
           <TouchableOpacity onPress={() => navigation.navigate('Menu')}>
             <ViewMenu />
@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: '#fff',
+    paddingTop: 10,
   },
   footer: {
     justifySelf: 'flex-start',
@@ -63,7 +64,6 @@ const styles = StyleSheet.create({
   greeting: {
     width: '100%',
     marginLeft: 50,
-    marginTop: 20,
   },
   h1: {
     fontSize: 32,

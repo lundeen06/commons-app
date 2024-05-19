@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   }
 });
 
-export const DiningCapacity = () => {
+export const DiningCapacity = ({ user }) => {
   return (
     // <TouchableOpacity onPress={() => console.log('capacity info pressed')}>
     <View style={styles.container}>

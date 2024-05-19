@@ -11,7 +11,8 @@ export const CommunityScreen = ({ navigation }) => {
 
   return (
     <View style={styles.main}>
-      <Text> [community screen goes here] </Text>
+      <Text style={styles.h1}> Community </Text>
+      
       <Footer navigation={navigation} />
     </View>
   );
@@ -26,8 +27,24 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: '#fff',
+    paddingTop: 10,
   },
   footer: {
     justifySelf: 'flex-start',
+  },
+  h1: {
+    fontSize: 32,
+    fontWeight: '600',
+    color: Colors.font,
+  },
+  h5: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: Colors.subtitle,
+  },
+  subtitle: {
+    color: '#888',
+    fontSize: 12,
+    fontWeight: '600',
   },
 });

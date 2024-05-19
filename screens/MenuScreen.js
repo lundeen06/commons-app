@@ -11,7 +11,8 @@ export const MenuScreen = ({ navigation }) => {
 
   return (
     <View style={styles.main}>
-      <Text> [dining halls go here] </Text>
+      <Text style={styles.h1}> Menus and Hours </Text>
+      
       <Footer navigation={navigation} />
     </View>
   );
@@ -26,8 +27,29 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: '#fff',
+    paddingTop: 10,
   },
   footer: {
     justifySelf: 'flex-start',
+  },
+  greeting: {
+    width: '100%',
+    marginLeft: 50,
+    marginTop: 20,
+  },
+  h1: {
+    fontSize: 32,
+    fontWeight: '600',
+    color: Colors.font,
+  },
+  h5: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: Colors.subtitle,
+  },
+  subtitle: {
+    color: '#888',
+    fontSize: 12,
+    fontWeight: '600',
   },
 });
