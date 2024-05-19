@@ -8,14 +8,14 @@ import { WalkingDistance } from "../components/WalkingDistance";
 import { ViewMenu } from "../components/ViewMenu";
 import { Images, Colors, auth } from "../config";
 
-testUser = {
+const testUser = {
   firstName: "Max",
   recommendedDiningHall: "Bartlett Dining Commons",
-}
+};
 
-user = testUser
+const user = testUser;
 
-export const HomeScreen = () => {
+export const HomeScreen = ({ navigation }) => { // Destructure navigation from props
   const handleLogout = () => {
     signOut(auth).catch((error) => console.log("Error logging out: ", error));
   };
@@ -25,7 +25,7 @@ export const HomeScreen = () => {
       {/* <Button title="Sign Out" onPress={handleLogout} /> */}
       {/* <Text> home </Text> */}
       <View style={styles.greeting}>
-        <Text style={styles.h1}>Hello, {user.firstName}! </Text>
+        <Text style={styles.h1}>Hello, {user.firstName} </Text>
         <Text style={styles.subtitle}>See your dining options today!</Text>
       </View>
       <TouchableOpacity onPress={() => navigation.navigate('Map')} style={styles.imageContainer}>
@@ -40,7 +40,7 @@ export const HomeScreen = () => {
           <ViewMenu />
         </View>
       </View>
-      <Footer style={styles.footer}/>
+      <Footer navigation={navigation} style={styles.footer}/>
     </View>
   );
 };

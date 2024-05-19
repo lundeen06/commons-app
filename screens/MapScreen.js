@@ -4,23 +4,30 @@ import { signOut } from "firebase/auth";
 import { Footer } from "../components/Footer";
 import { Images, Colors, auth } from "../config";
 
-export const MapScreen = () => {
+export const MapScreen = ({ navigation }) => {
   const handleLogout = () => {
     signOut(auth).catch((error) => console.log("Error logging out: ", error));
   };
 
   return (
     <View style={styles.main}>
-      <Footer />
+      <Text> [map goes here] </Text>
+      <Footer navigation={navigation} />
     </View>
   );
 };
 
-// Define styles inside the component
 const styles = StyleSheet.create({
   main: {
-    backgroundColor: '#450', // Assuming you meant #FF4500 for a bright orange color
-    width: '100%', // Use flex: 1 for full screen
-    height: '100%', // Use flex: 1 for full screen
-  }
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#fff',
+  },
+  footer: {
+    justifySelf: 'flex-start',
+  },
 });

@@ -26,16 +26,16 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Footer = () => {
+export const Footer = ({ navigation }) => {
   return (
     <View style={styles.footer}>
-      <TouchableOpacity onPress={() => console.log('Home pressed')}>
+      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
         <Text> <Icon name="home-outline" style={styles.icon} /> </Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => console.log('Map pressed')}>
+      <TouchableOpacity onPress={() => navigation.navigate('Map')}>
         <Text> <Icon name="map-outline" style={styles.icon} /> </Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => console.log('Book/Menu pressed')}>
+      <TouchableOpacity onPress={() => navigation.navigate('Menu')}>
         <Text> <Icon name="fast-food-outline" style={styles.icon} /> </Text>
       </TouchableOpacity>
       {/* <TouchableOpacity onPress={() => console.log('Book/Menu pressed')}>
@@ -44,7 +44,7 @@ export const Footer = () => {
       {/* <TouchableOpacity onPress={() => console.log('Teams pressed')}>
         <Text> <Icon name="people-outline" style={styles.icon} /> </Text>
       </TouchableOpacity> */}
-      <TouchableOpacity onPress={() => console.log('Profile pressed')}>
+      <TouchableOpacity onPress={() => navigation.navigate('Community')}>
         <Text> <Icon name="person-outline" style={styles.icon} /> </Text>
       </TouchableOpacity>
     </View>
