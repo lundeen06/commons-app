@@ -8,14 +8,12 @@ import { WalkingDistance } from "../components/WalkingDistance";
 import { ViewMenu } from "../components/ViewMenu";
 import { Images, Colors, auth } from "../config";
 
-
 testUser = {
   firstName: "first name",
   recommendedDiningHall: "recommended dining hall",
 }
 
 user = testUser
-
 
 export const HomeScreen = () => {
   const handleLogout = () => {
