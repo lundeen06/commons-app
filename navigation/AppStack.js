@@ -29,7 +29,8 @@ import { CommunityScreen } from "../screens/CommunityScreen";
 // trufflr
 // triflr
 // bitemarks --> bitemarx
-// 
+// feastr
+// jar jar banks
 
 const Stack = createStackNavigator();
 
