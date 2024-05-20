@@ -7,7 +7,7 @@ const CircularChart = ({ percent }) => {
   const formattedPercent = percent < 10? " " + percent : percent;
 
   return (
-    <Svg width="60" height="60" viewBox="0 0 36 36">
+    <Svg width="65" height="65" viewBox="0 0 36 36">
       {/* Background Circle */}
       <Path
         className="circle-bg"
