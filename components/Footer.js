@@ -18,34 +18,78 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 90,
   },
+  iconContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
   icon: {
     color: Colors.font,
     fontSize: 25, // Increased font size for better visibility
     fontWeight: '600',
     paddingBottom: 30,
   },
+  indicatorDot: {
+    width: 4,
+    height: 4,
+    borderRadius: 4,
+    backgroundColor: Colors.font,
+    marginTop: 5,
+  },
 });
 
 export const Footer = ({ navigation, currentScreen }) => {
   return (
     <View style={styles.footer}>
-      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-        <Text> <Icon name="home-outline" style={styles.icon} /> </Text>
+      <TouchableOpacity style={styles.iconContainer} onPress={() => navigation.navigate('Home')}>
+        <Text> 
+          <Icon name="home-outline" style={styles.icon} /> 
+        </Text>
+        <View style={[
+            styles.indicatorDot,
+            currentScreen == 'Home' ? {opacity: 100} : {opacity: 0},
+          ]} 
+        />
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('Map')}>
-        <Text> <Icon name="map-outline" style={styles.icon} /> </Text>
+      <TouchableOpacity style={styles.iconContainer} onPress={() => navigation.navigate('Map')}>
+        <Text> 
+          <Icon name="map-outline" style={styles.icon} /> 
+        </Text>
+        <View style={[
+            styles.indicatorDot,
+            currentScreen == 'Map' ? {opacity: 100} : {opacity: 0},
+          ]} 
+        />
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('Menu')}>
-        <Text> <Icon name="fast-food-outline" style={styles.icon} /> </Text>
+      <TouchableOpacity style={styles.iconContainer} onPress={() => navigation.navigate('Menu')}>
+        <Text> 
+          <Icon name="fast-food-outline" style={styles.icon} /> 
+        </Text>
+        <View style={[
+            styles.indicatorDot,
+            currentScreen == 'Menu' ? {opacity: 100} : {opacity: 0},
+          ]} 
+        />
       </TouchableOpacity>
-      {/* <TouchableOpacity onPress={() => console.log('Book/Menu pressed')}>
-        <Text> <Icon name="pizza-outline" style={styles.icon} /> </Text>
+      {/* <TouchableOpacity style={styles.iconContainer} onPress={() => navigation.navigate('Profile')}>
+        <Text> 
+          <Icon name="person-outline" style={styles.icon} /> 
+        </Text>
+        <View style={[
+            styles.indicatorDot,
+            currentScreen == 'Profile' ? {opacity: 100} : {opacity: 0},
+          ]} 
+        />
       </TouchableOpacity> */}
-      {/* <TouchableOpacity onPress={() => console.log('Profile pressed')}>
-        <Text> <Icon name="person-outline" style={styles.icon} /> </Text>
-      </TouchableOpacity> */}
-      <TouchableOpacity onPress={() => navigation.navigate('Community')}>
-        <Text> <Icon name="people-outline" style={styles.icon} /> </Text>
+      <TouchableOpacity style={styles.iconContainer} onPress={() => navigation.navigate('Community')}>
+        <Text> 
+          <Icon name="people-outline" style={styles.icon} /> 
+        </Text>
+        <View style={[
+            styles.indicatorDot,
+            currentScreen == 'Community' ? {opacity: 100} : {opacity: 0},
+          ]} 
+        />
       </TouchableOpacity>
     </View>
   );
