@@ -42,10 +42,10 @@ export const Footer = ({ navigation }) => {
         <Text> <Icon name="pizza-outline" style={styles.icon} /> </Text>
       </TouchableOpacity> */}
       {/* <TouchableOpacity onPress={() => console.log('Teams pressed')}>
-        <Text> <Icon name="people-outline" style={styles.icon} /> </Text>
+        <Text> <Icon name="person-outline" style={styles.icon} /> </Text>
       </TouchableOpacity> */}
       <TouchableOpacity onPress={() => navigation.navigate('Community')}>
-        <Text> <Icon name="person-outline" style={styles.icon} /> </Text>
+        <Text> <Icon name="people-outline" style={styles.icon} /> </Text>
       </TouchableOpacity>
     </View>
   );
