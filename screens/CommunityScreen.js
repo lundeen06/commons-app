@@ -10,14 +10,15 @@ export const CommunityScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.main}>
-      <View style={styles.hero}> 
-        <Text style={styles.h1}>Community</Text>
+    <>
+      <View style={styles.main}>
+        <View style={styles.hero}> 
+          <Text style={styles.h1}>Community</Text>
+        </View>
+        
       </View>
-      
-      
-      <Footer navigation={navigation} />
-    </View>
+      <Footer navigation={navigation} style={styles.footer}/>
+    </>
   );
 };
 
@@ -31,13 +32,14 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: '#fff',
     paddingTop: 10,
+    paddingLeft: 20,
   },
   footer: {
     justifySelf: 'flex-start',
   },
   hero: {
     width: '100%',
-    marginLeft: 50,
+    // marginLeft: 50,
   },
   h1: {
     fontSize: 32,

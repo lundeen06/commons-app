@@ -21,29 +21,31 @@ export const HomeScreen = ({ navigation }) => { // Destructure navigation from p
   };
 
   return (
-    <View style={styles.main}>
-      {/* <Button title="Sign Out" onPress={handleLogout} /> */}
-      {/* <Text> home </Text> */}
-      <View style={styles.greeting}>
-        <Text style={styles.h1}>Hello, {user.firstName}!</Text>
-        <Text style={styles.subtitle}>See your dining options today!</Text>
-      </View>
-      <TouchableOpacity onPress={() => navigation.navigate('Map')} style={styles.imageContainer}>
-        <Image source={require('../assets/map.png')} style={styles.image} />
-      </TouchableOpacity>
-      <View style={styles.info}>
-        <Text style={styles.h5}>Suggested: {user.recommendedDiningHall} </Text>
-        <View style={styles.infoContainer}>
-          <MenuPreview />
-          <DiningCapacity user={user} />
-          <WalkingDistance />
-          <TouchableOpacity onPress={() => navigation.navigate('Menu')}>
-            <ViewMenu />
-          </TouchableOpacity>
+    <>
+      <View style={styles.main}>
+        {/* <Button title="Sign Out" onPress={handleLogout} /> */}
+        {/* <Text> home </Text> */}
+        <View style={styles.greeting}>
+          <Text style={styles.h1}>Hello, {user.firstName}!</Text>
+          <Text style={styles.subtitle}>See your dining options today!</Text>
+        </View>
+        <TouchableOpacity onPress={() => navigation.navigate('Map')} style={styles.imageContainer}>
+          <Image source={require('../assets/map.png')} style={styles.image} />
+        </TouchableOpacity>
+        <View style={styles.info}>
+          <Text style={styles.h5}>Suggested: {user.recommendedDiningHall} </Text>
+          <View style={styles.infoContainer}>
+            <MenuPreview />
+            <DiningCapacity user={user} />
+            <WalkingDistance />
+            <TouchableOpacity onPress={() => navigation.navigate('Menu')}>
+              <ViewMenu />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
       <Footer navigation={navigation} style={styles.footer}/>
-    </View>
+    </>
   );
 };
 
@@ -57,13 +59,15 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: '#fff',
     paddingTop: 10,
+    paddingLeft: 20,
+    paddingRight: 20,
   },
   footer: {
     justifySelf: 'flex-start',
   },
   greeting: {
     width: '100%',
-    marginLeft: 50,
+    // marginLeft: 50,
   },
   h1: {
     fontSize: 32,
@@ -79,8 +83,8 @@ const styles = StyleSheet.create({
     height: 300,
     // height: '100%',
     // width: '100%',
-    marginLeft: 25,
-    marginRight: 25,
+    // marginLeft: 25,
+    // marginRight: 25,
   },
   infoContainer: {
     flex: 2, 
@@ -97,15 +101,14 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   image: {
-    paddingLeft: 10,
-    width: '100%',
-    height: 250,
+    // paddingLeft: 10,
+    height: 256,
     resizeMode: 'contain',
     borderRadius: 20,
   },
   imageContainer: {
-    width: '100%',
-    marginLeft: 20,
-    marginRight: 20,
+    width: 'calc(100% - 40px)',
+    // marginLeft: 20,
+    // marginRight: 20,
   }
 });

@@ -10,10 +10,12 @@ export const MapScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.main}>
-      <Text> [map goes here] </Text>
-      <Footer navigation={navigation} />
-    </View>
+    <>
+      <View style={styles.main}>
+        <Text> [map goes here] </Text>
+      </View>
+      <Footer navigation={navigation} style={styles.footer}/>
+    </>
   );
 };
 

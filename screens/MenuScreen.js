@@ -4,6 +4,25 @@ import { signOut } from "firebase/auth";
 import { Footer } from "../components/Footer";
 import { Images, Colors, auth } from "../config";
 
+diningHalls = [
+  {
+    name: "Bartlett Dining Commons",
+    img: '',
+  },
+  {
+    name: "Baker Dining Commons",
+    img: '',
+  },
+  {
+    name: "Woodlawn Dining Commons",
+    img: '',
+  },
+  {
+    name: "Cathey Dining Commons",
+    img: '',
+  },
+]
+
 export const MenuScreen = ({ navigation }) => {
   const [selectedOptions, setSelectedOptions] = useState({});
 
@@ -11,7 +30,7 @@ export const MenuScreen = ({ navigation }) => {
     signOut(auth).catch((error) => console.log("Error logging out: ", error));
   };
 
-  const options = ['Open now', 'Within.5mi', 'Not busy'];
+  const options = ['Open now', 'Within .5mi', 'Not busy'];
 
   const toggleSelector = (option) => {
     setSelectedOptions(prevState => ({
@@ -21,6 +40,7 @@ export const MenuScreen = ({ navigation }) => {
   };
 
   return (
+    <>
     <View style={styles.main}>
       <View style={styles.hero}> 
         <Text style={styles.h1}>Menus and Hours</Text>
@@ -42,9 +62,10 @@ export const MenuScreen = ({ navigation }) => {
           ))}
         </View>
       </View>
-
-      <Footer navigation={navigation} />
+      
     </View>
+    <Footer navigation={navigation} style={styles.footer}/>
+  </>
   );
 };
 
@@ -58,15 +79,15 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: '#fff',
     paddingTop: 10,
+    paddingLeft: 20,
+    paddingRight: 20,
   },
   footer: {
     justifySelf: 'flex-start',
   },
   hero: {
-    width: 'calc(100% - 100px)',
+    width: 'calc(100% - 40px)',
     height: 50,
-    marginLeft: 50,
-    marginRight: 50,
   },
   h1: {
     fontSize: 32,
