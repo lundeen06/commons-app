@@ -43,6 +43,5 @@ export const ViewMenu = () => {
           <Text style={styles.description}>menu, hours, and more</Text>
       </View>
     // </TouchableOpacity>
-   
   );
 };

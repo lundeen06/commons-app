@@ -12,9 +12,9 @@ export const MenuScreen = ({ navigation }) => {
   return (
     <View style={styles.main}>
       <View style={styles.hero}> 
-      <Text style={styles.h1}>Menus and Hours</Text>
+        <Text style={styles.h1}>Menus and Hours</Text>
       </View>
-      
+
       
       <Footer navigation={navigation} />
     </View>

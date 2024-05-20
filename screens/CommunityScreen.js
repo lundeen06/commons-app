@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
   hero: {
     width: '100%',
     marginLeft: 50,
-    // marginTop: 20,
   },
   h1: {
     fontSize: 32,

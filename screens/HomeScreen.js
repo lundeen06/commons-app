@@ -25,7 +25,7 @@ export const HomeScreen = ({ navigation }) => { // Destructure navigation from p
       {/* <Button title="Sign Out" onPress={handleLogout} /> */}
       {/* <Text> home </Text> */}
       <View style={styles.greeting}>
-        <Text style={styles.h1}>Hello, {user.firstName} </Text>
+        <Text style={styles.h1}>Hello, {user.firstName}!</Text>
         <Text style={styles.subtitle}>See your dining options today!</Text>
       </View>
       <TouchableOpacity onPress={() => navigation.navigate('Map')} style={styles.imageContainer}>
