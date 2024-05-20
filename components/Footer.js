@@ -41,7 +41,7 @@ export const Footer = ({ navigation }) => {
       {/* <TouchableOpacity onPress={() => console.log('Book/Menu pressed')}>
         <Text> <Icon name="pizza-outline" style={styles.icon} /> </Text>
       </TouchableOpacity> */}
-      {/* <TouchableOpacity onPress={() => console.log('Teams pressed')}>
+      {/* <TouchableOpacity onPress={() => console.log('Profile pressed')}>
         <Text> <Icon name="person-outline" style={styles.icon} /> </Text>
       </TouchableOpacity> */}
       <TouchableOpacity onPress={() => navigation.navigate('Community')}>
