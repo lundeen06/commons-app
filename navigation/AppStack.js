@@ -63,28 +63,48 @@ export const AppStack = () => {
         name="Home" 
         component={HomeScreen} 
         options={{
+          headerTitle: '',
           headerLeft: () => null, // Remove the back button
+          headerStyle: {
+            borderBottomWidth: 0, // Removes the bottom border
+            shadowOffset: { height: 0 }, // Adjusts the shadow offset to remove the shadow effect
+          },
         }}
       />
       <Stack.Screen 
         name="Map" 
         component={MapScreen} 
         options={{
+          headerTitle: '',
           headerLeft: () => null, // Remove the back button
+          headerStyle: {
+            borderBottomWidth: 0, // Removes the bottom border
+            shadowOffset: { height: 0 }, // Adjusts the shadow offset to remove the shadow effect
+          },  
         }}
       />
       <Stack.Screen 
         name="Menu" 
         component={MenuScreen} 
         options={{
+          headerTitle: '',
           headerLeft: () => null, // Remove the back button
+          headerStyle: {
+            borderBottomWidth: 0, // Removes the bottom border
+            shadowOffset: { height: 0 }, // Adjusts the shadow offset to remove the shadow effect
+          },  
         }}
       />
       <Stack.Screen 
         name="Community" 
         component={CommunityScreen} 
         options={{
+          headerTitle: '',
           headerLeft: () => null, // Remove the back button
+          headerStyle: {
+            borderBottomWidth: 0, // Removes the bottom border
+            shadowOffset: { height: 0 }, // Adjusts the shadow offset to remove the shadow effect
+          },  
         }}
       />
     </Stack.Navigator>
