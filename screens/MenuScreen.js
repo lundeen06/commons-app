@@ -7,19 +7,35 @@ import { Images, Colors, auth } from "../config";
 diningHalls = [
   {
     name: "Bartlett Dining Commons",
+    distance: 0.5,
     img: '',
+    open: true,
+    close: self.distance <= 0.5,
+    busy: false,
   },
   {
     name: "Baker Dining Commons",
+    distance: 0.8,
     img: '',
+    open: true,
+    close: self.distance <= 0.5,
+    busy: true,
   },
   {
     name: "Woodlawn Dining Commons",
+    distance: 0.2,
     img: '',
+    open: false,
+    close: self.distance <= 0.5,
+    busy: false,
   },
   {
     name: "Cathey Dining Commons",
+    distance: 0.8,
     img: '',
+    open: true,
+    close: self.distance <= 0.5,
+    busy: false,
   },
 ]
 
