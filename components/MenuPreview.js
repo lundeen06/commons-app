@@ -44,7 +44,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'black', // Change color to indicate selection
   },
   review: {
-    textWrap: 'break-word',
     fontSize: 12,
     marginTop: 10,
     fontWeight: '600',
