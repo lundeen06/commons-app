@@ -29,6 +29,7 @@ export const RootNavigator = () => {
     return <LoadingIndicator />;
   }
 
+  console.log(user)
   return (
     <NavigationContainer>
       {user ? <AppStack /> : <AuthStack />}

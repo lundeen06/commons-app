@@ -13,6 +13,8 @@ const firebaseConfig = {
   appId: Constants.expoConfig?.extra?.appId,
 };
 
+console.log(firebaseConfig)
+
 // initialize firebase
 const app = initializeApp(firebaseConfig);
 
