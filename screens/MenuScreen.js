@@ -64,7 +64,7 @@ export const MenuScreen = ({ navigation }) => {
       </View>
       
     </View>
-    <Footer navigation={navigation} style={styles.footer}/>
+    <Footer navigation={navigation} currentScreen={'Menu'} style={styles.footer}/>
   </>
   );
 };

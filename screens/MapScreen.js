@@ -14,7 +14,7 @@ export const MapScreen = ({ navigation }) => {
       <View style={styles.main}>
         <Text> [map goes here] </Text>
       </View>
-      <Footer navigation={navigation} style={styles.footer}/>
+      <Footer navigation={navigation} currentScreen={'Map'} style={styles.footer}/>
     </>
   );
 };

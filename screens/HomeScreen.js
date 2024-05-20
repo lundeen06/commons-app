@@ -44,7 +44,7 @@ export const HomeScreen = ({ navigation }) => { // Destructure navigation from p
           </View>
         </View>
       </View>
-      <Footer navigation={navigation} style={styles.footer}/>
+      <Footer navigation={navigation} currentScreen={'Home'} style={styles.footer}/>
     </>
   );
 };

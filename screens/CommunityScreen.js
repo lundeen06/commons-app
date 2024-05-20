@@ -17,7 +17,7 @@ export const CommunityScreen = ({ navigation }) => {
         </View>
         
       </View>
-      <Footer navigation={navigation} style={styles.footer}/>
+      <Footer navigation={navigation} currentScreen={'Community'} style={styles.footer}/>
     </>
   );
 };

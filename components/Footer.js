@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Footer = ({ navigation }) => {
+export const Footer = ({ navigation, currentScreen }) => {
   return (
     <View style={styles.footer}>
       <TouchableOpacity onPress={() => navigation.navigate('Home')}>
