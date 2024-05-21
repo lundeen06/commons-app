@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { View, StyleSheet, TouchableOpacity, Text, Image } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Text, Image, ScrollView } from "react-native";
 import { signOut } from "firebase/auth";
 import { Footer } from "../components/Footer";
+import { DiningHall } from "../components/DiningHall";
 import { Images, Colors, auth } from "../config";
 
 diningHalls = [
@@ -78,7 +79,13 @@ export const MenuScreen = ({ navigation }) => {
           ))}
         </View>
       </View>
+      <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
+        {diningHalls.map((hall) => (
+          <DiningHall hall={hall} />
+        ))}
+      </ScrollView>
     </View>
+    
     <Footer navigation={navigation} currentScreen={'Menu'} style={styles.footer}/>
   </>
   );
@@ -96,6 +103,10 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingLeft: 20,
     paddingRight: 20,
+  },
+  scroll: {
+    marginTop: 40,
+    width: '100%',
   },
   footer: {
     justifySelf: 'flex-start',
