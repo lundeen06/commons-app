@@ -8,7 +8,7 @@ diningHalls = [
   {
     name: "Bartlett Dining Commons",
     distance: 0.5,
-    img: '',
+    img: 'https://dining.uchicago.edu/files/2018/06/MG_4387-1grbi2i-1080x722.jpg',
     open: true,
     close: self.distance <= 0.5,
     busy: false,
@@ -16,7 +16,7 @@ diningHalls = [
   {
     name: "Baker Dining Commons",
     distance: 0.8,
-    img: '',
+    img: 'https://dining.uchicago.edu/files/2019/07/Baker-dining-commons.jpg',
     open: true,
     close: self.distance <= 0.5,
     busy: true,
@@ -24,7 +24,7 @@ diningHalls = [
   {
     name: "Woodlawn Dining Commons",
     distance: 0.2,
-    img: '',
+    img: 'https://dining.uchicago.edu/files/2019/07/woodlawn-e1603137558920-600x398.jpg',
     open: false,
     close: self.distance <= 0.5,
     busy: false,
@@ -32,7 +32,7 @@ diningHalls = [
   {
     name: "Cathey Dining Commons",
     distance: 0.8,
-    img: '',
+    img: 'https://dining.uchicago.edu/files/2019/07/Cathey-Dining-Commons-1-1080x720.jpg',
     open: true,
     close: self.distance <= 0.5,
     busy: false,
