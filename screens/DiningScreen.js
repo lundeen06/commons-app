@@ -88,7 +88,7 @@ export const DiningScreen = ({ navigation }) => {
         </ScrollView>
       </View>
       
-      <Footer navigation={navigation} currentScreen={'Menu'} style={styles.footer}/>
+      <Footer navigation={navigation} currentScreen={'Dining'} style={styles.footer}/>
     </>
   );
 };
