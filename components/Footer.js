@@ -61,13 +61,13 @@ export const Footer = ({ navigation, currentScreen }) => {
           ]} 
         />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.iconContainer} onPress={() => navigation.navigate('Menu')}>
+      <TouchableOpacity style={styles.iconContainer} onPress={() => navigation.navigate('Dining')}>
         <Text> 
           <Icon name="fast-food-outline" style={styles.icon} /> 
         </Text>
         <View style={[
             styles.indicatorDot,
-            currentScreen == 'Menu' ? {opacity: 100} : {opacity: 0},
+            currentScreen == 'Dining' ? {opacity: 100} : {opacity: 0},
           ]} 
         />
       </TouchableOpacity>

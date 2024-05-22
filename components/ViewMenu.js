@@ -33,15 +33,15 @@ const styles = StyleSheet.create({
   },
 });
 
-export const ViewMenu = () => {
+export const ViewMenu = ({ navigation }) => {
   return (
-    // <TouchableOpacity onPress={() => navigation.navigate('Menu')}>
+    <TouchableOpacity onPress={() => navigation.navigate('Dining')}>
       <View style={styles.container}>
           <Text style={styles.mainText}>View Menu{' '}
             {/* <Icon name="chevron-forward-outline" style={styles.icon} /> */}
           </Text>
           <Text style={styles.description}>menu, hours, and more</Text>
       </View>
-    // </TouchableOpacity>
+    </TouchableOpacity>
   );
 };

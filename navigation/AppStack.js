@@ -3,7 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
 import { HomeScreen } from "../screens/HomeScreen";
 import { MapScreen } from "../screens/MapScreen";
-import { MenuScreen } from "../screens/MenuScreen";
+import { DiningScreen } from "../screens/DiningScreen";
 import { CommunityScreen } from "../screens/CommunityScreen";
 
 // oh you get the name? explain it. fyph. (for your pie hole)
@@ -57,6 +57,7 @@ export const AppStack = () => {
     <Stack.Navigator
       screenOptions={{
         animationEnabled: false, // Disable animation for all screens
+        headerShown: false,
       }}
     >
       <Stack.Screen 
@@ -69,6 +70,7 @@ export const AppStack = () => {
             borderBottomWidth: 0, // Removes the bottom border
             shadowOffset: { height: 0 }, // Adjusts the shadow offset to remove the shadow effect
           },
+          headerShown: true,
         }}
       />
       <Stack.Screen 
@@ -84,8 +86,8 @@ export const AppStack = () => {
         }}
       />
       <Stack.Screen 
-        name="Menu" 
-        component={MenuScreen} 
+        name="Dining" 
+        component={DiningScreen} 
         options={{
           headerTitle: '',
           headerLeft: () => null, // Remove the back button

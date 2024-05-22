@@ -3,6 +3,7 @@ import { View, StyleSheet, TouchableOpacity, Text, Image, ScrollView } from "rea
 import { signOut } from "firebase/auth";
 import { Footer } from "../components/Footer";
 import { DiningHall } from "../components/DiningHall";
+import { Header } from "../components/Header";
 import { Images, Colors, auth } from "../config";
 
 diningHalls = [
@@ -40,7 +41,7 @@ diningHalls = [
   },
 ]
 
-export const MenuScreen = ({ navigation }) => {
+export const DiningScreen = ({ navigation }) => {
   const [selectedOptions, setSelectedOptions] = useState({});
 
   const handleLogout = () => {
@@ -58,36 +59,37 @@ export const MenuScreen = ({ navigation }) => {
 
   return (
     <>
-    <View style={styles.main}>
-      <View style={styles.hero}> 
-        <Text style={styles.h1}>Menus and Hours</Text>
-        <View style={styles.selectorContainer}> 
-          {options.map((option, index) => (
-            <TouchableOpacity 
-              key={index}
-              style={[
-                styles.selector, 
-                selectedOptions[option]? {backgroundColor: Colors.font} : {backgroundColor: Colors.white}
-              ]}
-              onPress={() => toggleSelector(option)}
-            >
-              <Text style={[
-                styles.selectorText, 
-                selectedOptions[option]? {color: Colors.white} : {color: Colors.font}
-              ]}>{option}</Text>
-            </TouchableOpacity>
-          ))}
+      <Header />
+      <View style={styles.main}>
+        <View style={styles.hero}> 
+          <Text style={styles.h1}>Menus and Hours</Text>
+          <View style={styles.selectorContainer}> 
+            {options.map((option, index) => (
+              <TouchableOpacity 
+                key={index}
+                style={[
+                  styles.selector, 
+                  selectedOptions[option]? {backgroundColor: Colors.font} : {backgroundColor: Colors.white}
+                ]}
+                onPress={() => toggleSelector(option)}
+              >
+                <Text style={[
+                  styles.selectorText, 
+                  selectedOptions[option]? {color: Colors.white} : {color: Colors.font}
+                ]}>{option}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
         </View>
+        <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
+          {diningHalls.map((hall) => (
+            <DiningHall hall={hall} />
+          ))}
+        </ScrollView>
       </View>
-      <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
-        {diningHalls.map((hall) => (
-          <DiningHall hall={hall} />
-        ))}
-      </ScrollView>
-    </View>
-    
-    <Footer navigation={navigation} currentScreen={'Menu'} style={styles.footer}/>
-  </>
+      
+      <Footer navigation={navigation} currentScreen={'Menu'} style={styles.footer}/>
+    </>
   );
 };
 

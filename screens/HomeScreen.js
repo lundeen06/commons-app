@@ -38,9 +38,7 @@ export const HomeScreen = ({ navigation }) => { // Destructure navigation from p
             <MenuPreview />
             <DiningCapacity user={user} />
             <WalkingDistance />
-            <TouchableOpacity onPress={() => navigation.navigate('Menu')}>
-              <ViewMenu />
-            </TouchableOpacity>
+            <ViewMenu navigation={navigation} />
           </View>
         </View>
       </View>
