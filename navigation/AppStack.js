@@ -8,6 +8,7 @@ import { DiningScreen } from "../screens/DiningScreen";
 import { MenuScreen } from "../screens/MenuScreen";
 
 import { CommunityScreen } from "../screens/CommunityScreen";
+import { Footer } from "../components/Footer";
 
 // oh you get the name? explain it. fyph. (for your pie hole)
 // foodbook. we out here getting sued with this one!!! 
@@ -57,6 +58,7 @@ const Stack = createStackNavigator();
 
 export const AppStack = () => {
   return (
+    <>
     <Stack.Navigator
       screenOptions={{
         animationEnabled: false, // Disable animation for all screens
@@ -125,5 +127,7 @@ export const AppStack = () => {
         }}
       />
     </Stack.Navigator>
+    {/* <Footer /> */}
+    </>
   );
 };
