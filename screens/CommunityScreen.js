@@ -2,6 +2,7 @@ import React from "react";
 import { View, StyleSheet, Button, Text, TouchableOpacity, Image } from "react-native";
 import { signOut } from "firebase/auth";
 import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
 import { Images, Colors, auth } from "../config";
 
 export const CommunityScreen = ({ navigation }) => {
@@ -11,6 +12,7 @@ export const CommunityScreen = ({ navigation }) => {
 
   return (
     <>
+      <Header />
       <View style={styles.main}>
         <View style={styles.hero}> 
           <Text style={styles.h1}>Community</Text>
