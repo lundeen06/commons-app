@@ -42,20 +42,46 @@ diningHalls = [
 ]
 
 export const DiningScreen = ({ navigation }) => {
-  const [selectedOptions, setSelectedOptions] = useState({});
+  const [selectedOptions, setSelectedOptions] = useState({
+    'Open now': false,
+    'Within.5mi': false,
+    'Not busy': false,
+  });
 
   const handleLogout = () => {
     signOut(auth).catch((error) => console.log("Error logging out: ", error));
   };
 
-  const options = ['Open now', 'Within .5mi', 'Not busy'];
+  const options = ['Open now', 'Within.5mi', 'Not busy'];
 
   const toggleSelector = (option) => {
     setSelectedOptions(prevState => ({
-     ...prevState,
+    ...prevState,
       [option]:!prevState[option]
     }));
   };
+
+  // Filter dining halls based on selected options
+  const filteredDiningHalls = diningHalls.filter(hall => {
+    let showHall = true;
+
+    // Check if 'Within.5mi' is selected and the hall is within.5mi
+    if (selectedOptions['Within.5mi'] && hall.distance > 0.5) {
+      showHall = false;
+    }
+
+    // Check if 'Open now' is selected and the hall is open
+    if (selectedOptions['Open now'] &&!hall.open) {
+      showHall = false;
+    }
+
+    // Check if 'Not busy' is selected and the hall is busy
+    if (selectedOptions['Not busy'] && hall.busy) {
+      showHall = false;
+    }
+
+    return showHall;
+  });
 
   return (
     <>
@@ -82,7 +108,7 @@ export const DiningScreen = ({ navigation }) => {
           </View>
         </View>
         <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
-          {diningHalls.map((hall) => (
+          {filteredDiningHalls.map((hall) => (
             <DiningHall navigation={navigation} hall={hall} />
           ))}
         </ScrollView>
