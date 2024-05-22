@@ -83,7 +83,7 @@ export const DiningScreen = ({ navigation }) => {
         </View>
         <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
           {diningHalls.map((hall) => (
-            <DiningHall hall={hall} />
+            <DiningHall navigation={navigation} hall={hall} />
           ))}
         </ScrollView>
       </View>
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: '#fff',
-    paddingTop: 10,
+    paddingTop: 20,
     paddingLeft: 20,
     paddingRight: 20,
   },

@@ -3,7 +3,7 @@ import { View, TouchableOpacity, StyleSheet, Text, ImageBackground } from 'react
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Images, Colors, auth } from "../config";
 
-export const DiningHall = ({ hall }) => {
+export const DiningHall = ({ navigation, hall }) => {
     const styles = StyleSheet.create({
         container: {
           marginBottom: 10,
@@ -63,7 +63,7 @@ export const DiningHall = ({ hall }) => {
     });
 
     return (
-        <TouchableOpacity style={styles.container} onPress={() => console.log(`${hall.name} pressed`)}>
+        <TouchableOpacity style={styles.container} onPress={() => navigation.navigate('Menu')}>
             <View style={styles.imageContainer}>
                 <ImageBackground source={{ uri: hall.img }} style={styles.imageBackground}>
                     {/* Place the overlay behind the Text component */}

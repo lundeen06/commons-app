@@ -3,7 +3,10 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
 import { HomeScreen } from "../screens/HomeScreen";
 import { MapScreen } from "../screens/MapScreen";
+
 import { DiningScreen } from "../screens/DiningScreen";
+import { MenuScreen } from "../screens/MenuScreen";
+
 import { CommunityScreen } from "../screens/CommunityScreen";
 
 // oh you get the name? explain it. fyph. (for your pie hole)
@@ -103,6 +106,18 @@ export const AppStack = () => {
         options={{
           headerTitle: '',
           headerLeft: () => null, // Remove the back button
+          headerStyle: {
+            borderBottomWidth: 0, // Removes the bottom border
+            shadowOffset: { height: 0 }, // Adjusts the shadow offset to remove the shadow effect
+          },  
+        }}
+      />
+      <Stack.Screen 
+        name="Menu" 
+        component={MenuScreen} 
+        options={{
+          headerTitle: '',
+          headerLeft: () => null,
           headerStyle: {
             borderBottomWidth: 0, // Removes the bottom border
             shadowOffset: { height: 0 }, // Adjusts the shadow offset to remove the shadow effect
