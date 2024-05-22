@@ -19,7 +19,7 @@ export const HomeScreen = ({ navigation }) => { // Destructure navigation from p
     firstName: "Max",
     recommendedDiningHall: "Bartlett Dining Commons",
   };
-
+  
   return (
     <>
       <View style={styles.main}>
