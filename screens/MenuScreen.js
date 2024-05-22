@@ -19,6 +19,7 @@ const bartlett = {
       description: '',
       avgRating: 4.3,
       recommended: true,
+      calories: 800,
       allergens: [
         'dairy', 
       ],

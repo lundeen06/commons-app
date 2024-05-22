@@ -1,70 +1,88 @@
 import React from 'react';
-import { View, TouchableOpacity, StyleSheet, Text, ImageBackground } from 'react-native';
+import { View, TouchableOpacity, StyleSheet, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Images, Colors, auth } from "../config";
 
 export const Food = ({ food }) => {
     return (
-        <View key={food.name} style={styles.foodContainer}>
-            <Text style={styles.name}>{food.name}</Text>
-            <Text style={styles.rating}>
-                {food.avgRating.toFixed(1)}
-                <View style={{ width: 3 }} />
-                <Icon style={styles.star} name="star"></Icon>
-            </Text>
-            <TouchableOpacity style={styles.iconContainer} onpress={console.log(`report ${food.name}`)}>
-                <Icon style={[styles.icon, styles.report]} name="flag-outline" />
-            </TouchableOpacity>
+        <View style={styles.foodContainer}>
+            <View style={styles.nameContainer}>
+                <Text style={styles.name}>{food.name}</Text>
+            </View>
+            <View style={styles.ratingContainer}>
+                <Text style={styles.rating}>
+                    {food.avgRating.toFixed(1)}
+                    <View style={{ width: 3 }} />
+                    <Icon style={styles.star} name="star" />
+                </Text>
+            </View>
+            <Icon name="flash-outline">{food.calories}</Icon>
+            <View style={styles.iconContainer}>
+                <TouchableOpacity style={styles.reportContainer} onPress={() => console.log(`report ${food.name}`)}>
+                    <Icon style={styles.icon} name="flag-outline" />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.moreContainer} onPress={() => console.log(`view more on ${food.name}`)}>
+                    <Icon style={styles.icon} name="chevron-forward-outline" />
+                </TouchableOpacity>
+            </View>
+            
             {/* <Text style={styles.subtitle}>Recommended: Yes</Text> */}
             {/* Render other properties as needed */}
         </View>
     )
 };
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
     foodContainer: {
-        display: 'flex',
-        width: '100%',
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        height: 50,
-        border: `5px solid ${Colors.lightGray}`,
-        justifyContent: 'flex-start',
-        alignItems: 'center',
+        flexDirection: 'row', // Use flexDirection to arrange children in a row
+        justifyContent: 'space-between', // Distribute space evenly between children
+        alignItems: 'center', // Align children vertically in the center
+        width: '100%', // Full width of the screen
+        height: 50, // Fixed height for consistency
+        // border: `5px solid ${Colors.lightGray}`, // Uncomment if needed
+    },
+    nameContainer: {
+        flex: 1, // Take up equal space
+        backgroundColor: '#f00',
+        width: 100,
     },
     name: {
         fontSize: 14,
         fontWeight: '600',
         color: Colors.subtitle,
-        height: '100%',
+        textWrap: 'break-word',
+    },
+    iconContainer: {
+        flex: 1, // Take up equal space
+        flexDirection: 'row', // Arrange icons in a row
+        justifyContent: 'space-between', // Space between icons
+        alignItems: 'center', // Center icons vertically
+    },
+    reportContainer: {
+        backgroundColor: '#00f',
+        marginLeft: 20,
+    },
+    moreContainer: {
+        backgroundColor: '#f00',
+        marginLeft: 20,
+    },
+    ratingContainer: {
+        flex: 1, // Take up equal space
+        backgroundColor: '#0f0',
+        alignItems: 'flex-start', // Center icons vertically
     },
     icon: {
         color: Colors.font, 
-        fontSize: 12,
-        height: '100%',
-    },
-    iconContainer: {
-        width: 25, 
-        height: 25,
-        backgroundColor: Colors.lightGray,
-        display: 'flex',
-        // justifyContent: 'center',
-        alignItems: 'center',
-    },
-    report: {
-        color: Colors.font, 
-        height: '100%',
+        fontSize: 16,
     },
     rating: {
         fontSize: 14,
-        height: '100%',
         fontWeight: '600',
         color: Colors.subtitle,
-        marginTop: 5,
+        marginRight: 5, // Add some spacing between the text and the icon
     },
-      star: {
+    star: {
         color: Colors.font,
         fontSize: 12,
     },
-})
+});
