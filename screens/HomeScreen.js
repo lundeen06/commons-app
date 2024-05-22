@@ -16,7 +16,7 @@ export const HomeScreen = ({ navigation }) => { // Destructure navigation from p
   };
 
   const user = {
-    firstName: "Max",
+    firstName: "Lundeen",
     recommendedDiningHall: "Bartlett Dining Commons",
   };
   
