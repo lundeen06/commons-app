@@ -12,7 +12,11 @@ export const MapScreen = ({ navigation }) => {
   return (
     <>
       <View style={styles.main}>
-        <Text> [map goes here] </Text>
+        {/* Specify the source of the image */}
+        <Image 
+          style={styles.image} // Adjust the size as needed
+          source={require('../assets/full-map.png')} // Use uri property to specify the image source
+        />
       </View>
       <Footer navigation={navigation} currentScreen={'Map'} style={styles.footer}/>
     </>
@@ -28,6 +32,11 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: '#fff',
+  },
+  image: {
+    height: '100%',
+    width: '100%',
+    // resizeMode: 'contain',
   },
   footer: {
     justifySelf: 'flex-start',
