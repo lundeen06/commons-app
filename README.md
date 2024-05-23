@@ -2,21 +2,21 @@
 
 Wafflr is a student-first dining app that actively encourages students to engage in healthy eating habits. While the app brings students the standard information of any other campus dining app, including meals, dining hall hours, etc., the app is optimized to help students (i) find nutritious meals they never knew about, (ii) figure out where to go for lunch, and (iii) engage in campus-wide discussion about campus food.
 
-![HomeScreen](https://github.com/lundeen06/wafflr/screenshots/HomeScreen.png)
+![HomeScreen](https://github.com/lundeen06/wafflr/assets/40362577/8e912c93-bb51-4048-ac08-fc89994a2630)
 
 When the student opens the app, they are greeted with a map, the suggested dining hall, the top three recommended foods, the dining hall capacity, and the dining hall’s distance from their current location (above). 
 
 Although the map is just a placeholder image at this point in development, it would show the suggested dining hall and the user’s friends who were eating there in the last 30 minutes. When the small map is pressed, the app switches to the full map tab which can be used to view all of the campus’s dining halls (below).
 
-![MapScreen](https://github.com/lundeen06/wafflr/screenshots/MapScreen.png)
+![MapScreen](https://github.com/lundeen06/wafflr/assets/40362577/d05a4509-9745-4584-b775-c1ede6e7347c)
 
 Knowing which friends are eating where, the user can make a better-informed, spontaneous decision on where to eat. Note that users’ locations are only shown to their friends, and location is only shown when the user is at a dining hall. The suggested foods include a review and average rating to encourage active discussion of the foods, albeit in a light-hearted and hopefully humorous way. If the user does not want to go to the suggested dining hall, they only need to swipe horizontally on the map for it to shift to another dining hall.
 
-![DiningScreen](https://github.com/lundeen06/wafflr/screenshots/DiningScreen.png)
+![DiningScreen](https://github.com/lundeen06/wafflr/assets/40362577/624d1b79-3c2b-4e84-a110-58f51d017650)
 
 Alternatively, the user can go to the dining tab to pick a dining hall (above). They can filter to see which places are open, nearby, and not busy. When a dining hall is pressed, then the menu tab opens (below). 
 
-![MenuScreen](https://github.com/lundeen06/wafflr/screenshots/MenuScreen.png)
+![MenuScreen](https://github.com/lundeen06/wafflr/assets/40362577/c22d13fd-ac4f-467a-a363-fb277a62bfce)
 
 While the current version does not yet have example meals on this page, note that the recommended meals show by default before the full menu. In doing so, I hope to encourage the student to find a meal they did not know existed yet but, based on their previous ratings of other foods, would be likely to also enjoy.
 
