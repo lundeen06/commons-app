@@ -65,14 +65,25 @@ export const MenuPreview = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedFoodIndex, setSelectedFoodIndex] = useState(0); // New state for tracking selected food
   const panRef = useRef(null);
-  const threshold = 150
+  // const threshold = 150
   const panHandlers = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
     onPanResponderMove: (_, gestureState) => {
-      if (gestureState.dx > threshold) {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % foods.length);
+      const dx = gestureState.dx;
+      const vx = gestureState.vx; // Velocity along the x-axis
+  
+      // Adjusting the threshold dynamically based on the swipe velocity
+      let threshold = 250; // Default threshold
+      if (Math.abs(vx) > 0.5) { // Adjust this value based on testing
+        threshold = Math.abs(dx / vx) * 2; // Dynamically adjust threshold based on velocity
       }
-      if (gestureState.dx < (-1 * threshold)) {
+  
+      if (dx < (-1 * threshold)) {
+        console.log('swipe left');
+        setCurrentIndex((prevIndex) => (prevIndex + 1 + foods.length) % foods.length);
+      }
+      if (dx > threshold) {
+        console.log('swipe right');
         setCurrentIndex((prevIndex) => (prevIndex - 1 + foods.length) % foods.length);
       }
     },
@@ -80,6 +91,7 @@ export const MenuPreview = () => {
       setSelectedFoodIndex(currentIndex); // Update selected food index on release
     },
   });
+  
 
   return (
     <>
