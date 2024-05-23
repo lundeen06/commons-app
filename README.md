@@ -1,10 +1,29 @@
-# [app name]
-Food allergies are on the rise—and they’re here to stay. [stat on instances of food allergies vs. times] Pediatric Allergy Expert Ruchi Gupta depicts the undeniable, present reality of allergies, stating “There are about two kids in the class that have a food allergy and you realize how realistic this is and how prevalent” (Gupta). Gupta swears by the mystery of this sudden uptick, remarking “We would not have this epidemic and this huge increase if it was just genetics” (Gupta). Although the factors increasing the instances of food allergies have faced scrutiny from medical professionals worldwide, no complete theories have been confirmed. 
+# wafflr
 
-Given the large affected population and few known ways to prevent food allergies, short term efforts should concern management rather than finding an outright cure. With such a large population affected and little information on initial prevention, efforts must be readjusted to concern management rather than outright cures. As children constitute the following generation of individuals with food allergies, it becomes increasingly pressing for them to understand how to grapple with personal responsibility while holding harmful external actors accountable.
+Wafflr is a student-first dining app that actively encourages students to engage in healthy eating habits. While the app brings students the standard information of any other campus dining app, including meals, dining hall hours, etc., the app is optimized to help students (i) find nutritious meals they never knew about, (ii) figure out where to go for lunch, and (iii) engage in campus-wide discussion about campus food.
 
-[move to the obligations and subsequent dilemma dining halls face]
-[introduce soln–help students find the food that's best for them on a given day w/ the app]
-[put photos of app's usage, like a guide]
+![HomeScreen](https://github.com/lundeen06/wafflr/screenshots/HomeScreen.png)
 
-[sources/bib]
+When the student opens the app, they are greeted with a map, the suggested dining hall, the top three recommended foods, the dining hall capacity, and the dining hall’s distance from their current location (above). 
+
+Although the map is just a placeholder image at this point in development, it would show the suggested dining hall and the user’s friends who were eating there in the last 30 minutes. When the small map is pressed, the app switches to the full map tab which can be used to view all of the campus’s dining halls (below).
+
+![MapScreen](https://github.com/lundeen06/wafflr/screenshots/MapScreen.png)
+
+Knowing which friends are eating where, the user can make a better-informed, spontaneous decision on where to eat. Note that users’ locations are only shown to their friends, and location is only shown when the user is at a dining hall. The suggested foods include a review and average rating to encourage active discussion of the foods, albeit in a light-hearted and hopefully humorous way. If the user does not want to go to the suggested dining hall, they only need to swipe horizontally on the map for it to shift to another dining hall.
+
+![DiningScreen](https://github.com/lundeen06/wafflr/screenshots/DiningScreen.png)
+
+Alternatively, the user can go to the dining tab to pick a dining hall (above). They can filter to see which places are open, nearby, and not busy. When a dining hall is pressed, then the menu tab opens (below). 
+
+![MenuScreen](https://github.com/lundeen06/wafflr/screenshots/MenuScreen.png)
+
+While the current version does not yet have example meals on this page, note that the recommended meals show by default before the full menu. In doing so, I hope to encourage the student to find a meal they did not know existed yet but, based on their previous ratings of other foods, would be likely to also enjoy.
+
+There are a few key aspects of the menu screen that are integral to the app but have not yet been added due to time constraints—despite 30+ hours of coding! For each meal, there will be the name, its average rating, a button to view more, and a flag. The flag would be used for reporting any incidents ranging from someone experiencing an allergic reaction after that food or even to smaller incidents like cross-contamination. This feature would allow such incidents to be centralized, which then could help me create some kind of risk profile statistic for each food.
+
+![Uber-iPhone-Activities-Support-Feature](https://github.com/lundeen06/wafflr/assets/40362577/c6a19902-fae2-4d4a-aebb-e8b5d1cf39f2)
+
+There is one last element of the app: ratings. While the user is at a dining hall, a widget would display on the lock screen to ask for the food the user ate and its rating (1-5 stars). Uber and Lyft have started using this system to convey pickup time data as well as encourage users to rate their drivers after the ride, yet few other apps have yet to leverage this new IOS feature. Rating data is paramount to the app’s viability because it allows students to give their unbiased feedback on the food quality, which can then be used in studies on the quality of life for students with food allergies and other food restrictions.
+
+Ultimately, I’m confident that Wafflr’s rating and reports systems could help keep the schools accountable and make constant progress, rather than allowing problems to build up until a lawsuit occurs. The latter causes pain and suffering both for the students with food allergies and the schools, so I think smaller yet more consistent strides toward compliance with the ADA would benefit all parties. Moreover, I believe Wafflr can inadvertently encourage college students to eat more safely by bringing them access to nutritious, allergen-safe meals.
