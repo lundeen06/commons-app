@@ -6,7 +6,7 @@ export default {
     slug: "wafflr",
     privacy: "public",
     platforms: ["ios", "android"],
-    version: "0.20.0",
+    version: "0.70.0",
     orientation: "portrait",
     icon: "./assets/flame.png",
     splash: {
