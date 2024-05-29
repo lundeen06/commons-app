@@ -157,14 +157,15 @@ export const MenuScreen = ({ navigation, hall }) => {
           </TouchableOpacity>
         </View>
         <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
-          <Text> foods go here!</Text>
-          {/* {selectedOption === 'recommended'
-          ? bartlett.foods.filter(food => food.recommended).map((food) => (
-            <Food food={food} />
+          {selectedOption === 'recommended'
+          ? bartlett.foods.filter(food => food.recommended).map((food, i) => (
+            // <Food food={food} />
+            <Text> recommended food #{i + 1} </Text>
           ))
-          : bartlett.foods.map((food) => (
-            <Food food={food} />
-          ))} */}
+          : bartlett.foods.map((food, i) => (
+            // <Food food={food} />
+            <Text> food #{i + 1}</Text>
+          ))}
         </ScrollView>
 
       </View>
